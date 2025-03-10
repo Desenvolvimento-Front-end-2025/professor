@@ -1,0 +1,12 @@
+
+.container{
+    width: 100vw;
+    background-color: #bbb;
+    padding: 25px;
+    text-align: center;
+}
+
+.body{
+    width: 100vw;
+    background-color: #ece636;
+}
