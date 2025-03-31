@@ -1,6 +1,8 @@
 import Card from "../../components/Card/Card"
 import Titulo from "../../components/Titulo/Titulo"
 import Aluno from "../../desafios/desafio01/Aluno"
+import Turma from "../../desafios/desafio03/Turma"
+import Familia from "../../desafios/desafio05/Famila"
 import "./Portifolio.css"
 
 const Portifolio = ()=>{
@@ -14,12 +16,23 @@ const Portifolio = ()=>{
             </Card>
 
             <Card titulo="Exemplo 02" cor="#bb4" >
-                <h3>outro teste</h3>
+                <h3>Aleatório</h3>
             </Card>
-            <Card titulo="Exemplo 03" >
-                <h1>Teste</h1>
+
+            <Card titulo="Desafio 03 - Lista" >
+                
+                <Turma turma="Front end" />
+
             </Card>
-            <Card titulo="Exemplo 04" />
+
+            <Card titulo="Desafio 04 - Exercício" >
+                Exercício 2 da lista
+            </Card>
+
+            <Card titulo="Desafio 05 - Componentes Filhos" >
+                <Familia sobrenome="Martins" />
+            </Card>
+
 
         </div>
     )    

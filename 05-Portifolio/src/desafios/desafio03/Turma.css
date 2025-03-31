@@ -1,0 +1,17 @@
+
+.TurmaContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.TurmaContainer div{
+    background-color: #d51d1d;
+    border: solid 1px #fff;
+}
+
+.TurmaContainer li{
+ list-style: none;
+ margin-left: 15px;
+ padding-bottom: 5px;
+}
