@@ -1,18 +1,18 @@
+import React from "react";
 import "./Famila.css";
 
-const Familia = ( {sobrenome} )=>{
-
-
+const Familia = ( {sobrenome, children} )=>{
     return(
         <fieldset>
             <legend>Familia {sobrenome}</legend>
 
-            Zezin Martins Pai<br />
-            MAriazinha Martins Mãe<br />
-                PEdrin Martins Filho<br />
-                    Gustin MArtins Neto<br />
-                Zezin Martins Filho<br />
-
+            {
+            children.map( (m)=>{
+                let newMembro = React.cloneElement(m, {sobreNome : sobrenome})
+                return newMembro
+                }
+             )
+            }
         </fieldset>
     )
 }

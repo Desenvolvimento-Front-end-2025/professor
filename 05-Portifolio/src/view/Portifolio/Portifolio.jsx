@@ -3,6 +3,7 @@ import Titulo from "../../components/Titulo/Titulo"
 import Aluno from "../../desafios/desafio01/Aluno"
 import Turma from "../../desafios/desafio03/Turma"
 import Familia from "../../desafios/desafio05/Famila"
+import Membro from "../../desafios/desafio05/Membro"
 import "./Portifolio.css"
 
 const Portifolio = ()=>{
@@ -30,7 +31,20 @@ const Portifolio = ()=>{
             </Card>
 
             <Card titulo="Desafio 05 - Componentes Filhos" >
-                <Familia sobrenome="Martins" />
+
+                <Familia sobrenome="Martins" >
+                    <Membro nome="Zezin" sobreNome="Silverio" />
+                    <Membro nome="Mariazinha" sobreNome="XXXXXX" />
+                    <Membro nome="Pedrin" sobreNome="Martins" nivel={1} />
+                    <Membro nome="Gustin" sobreNome="Martins" nivel={2} />
+                </Familia>
+
+                <Familia sobrenome="Perreira" >
+                    <Membro nome="Alberto" />
+                    <Membro nome="Marquin"  nivel={1} />
+                    <Membro nome="Betin"  nivel={3} />
+                </Familia>
+                
             </Card>
 
 
