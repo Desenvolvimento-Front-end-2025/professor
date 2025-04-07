@@ -4,6 +4,8 @@ import Aluno from "../../desafios/desafio01/Aluno"
 import Turma from "../../desafios/desafio03/Turma"
 import Familia from "../../desafios/desafio05/Famila"
 import Membro from "../../desafios/desafio05/Membro"
+import InputCount from "../../desafios/desafio06/InputCount"
+import MaiorMenor from "../../desafios/desafio06/MaiorMenor"
 import "./Portifolio.css"
 
 const Portifolio = ()=>{
@@ -45,6 +47,16 @@ const Portifolio = ()=>{
                     <Membro nome="Betin"  nivel={3} />
                 </Familia>
                 
+            </Card>
+
+            <Card titulo="Desafio 06 - Condicional" cor="#a7b" >
+
+                <MaiorMenor nome="Zezin da Silva" idade={18}/>
+                <MaiorMenor nome="Pedrin Miguel" idade={13} 
+                controle={false}/>
+
+                {/* <InputCount /> */}
+
             </Card>
 
 
