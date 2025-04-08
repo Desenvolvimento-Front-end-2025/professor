@@ -1,3 +1,4 @@
+import { useState } from "react"
 import Card from "../../components/Card/Card"
 import Titulo from "../../components/Titulo/Titulo"
 import Aluno from "../../desafios/desafio01/Aluno"
@@ -10,10 +11,14 @@ import "./Portifolio.css"
 
 const Portifolio = ()=>{
 
+    let nome = "Zezin da Silva"
+
+    const [ xNome, SetXnome] = useState("Gustin")
+
     return (
         <div className="board">
             <Titulo valor="Componentes React" />
-            
+
             <Card titulo="Desafio 01 - Passagem de Parâmetro" cor="#fa4" >
                 <Aluno nome="Zezin da Silva" nota={8} />
             </Card>
@@ -49,16 +54,20 @@ const Portifolio = ()=>{
                 
             </Card>
 
+
             <Card titulo="Desafio 06 - Condicional" cor="#a7b" >
 
                 <MaiorMenor nome="Zezin da Silva" idade={18}/>
+
                 <MaiorMenor nome="Pedrin Miguel" idade={13} 
                 controle={false}/>
 
                 {/* <InputCount /> */}
+{/* 
+                <input value={xNome} 
+                onChange={ (e)=> SetXnome(e.target.value) } /> */}
 
             </Card>
-
 
         </div>
     )    

@@ -1,19 +1,25 @@
+import { useState } from "react"
 import InputCount from "./InputCount"
 import "./MaiorMenor.css"
 
 const MaiorMenor = ( {nome, idade, controle=true} )=>{
 
+    const [usIdade, setIdade] = useState(idade)
+    const mudaIdade = (valor)=>{
+        setIdade(valor)
+    }
+
     return(
         <div>
             {nome}, 
-            <span className={(idade<18)?'menor':'maior'} >
-                {idade}
+            <span className={(usIdade<18)?'menor':'maior'} >
+                {usIdade}
                 </span> anos de idade
-                {(idade>=18) && 
-                    <h4>{nome} é Maior de Idade</h4>
+                {(usIdade>=18) && 
+                    <h4>é Maior de Idade</h4>
                 }
                 {controle &&
-                 <InputCount valor={idade} />
+                 <InputCount valor={idade} onChange={ mudaIdade } />
                 }
         </div>
     )
