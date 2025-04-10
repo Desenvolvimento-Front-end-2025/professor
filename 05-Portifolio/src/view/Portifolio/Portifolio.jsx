@@ -8,6 +8,7 @@ import Membro from "../../desafios/desafio05/Membro"
 import InputCount from "../../desafios/desafio06/InputCount"
 import MaiorMenor from "../../desafios/desafio06/MaiorMenor"
 import "./Portifolio.css"
+import Digital from "../../desafios/desafio07/Digital"
 
 const Portifolio = ()=>{
 
@@ -66,6 +67,12 @@ const Portifolio = ()=>{
 {/* 
                 <input value={xNome} 
                 onChange={ (e)=> SetXnome(e.target.value) } /> */}
+
+            </Card>
+
+
+            <Card titulo="Desafio 07 - Relogio Digital" cor="#a7b" >
+                <Digital />
 
             </Card>
 

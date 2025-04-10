@@ -1,0 +1,51 @@
+
+.dgtCont{
+    padding: 5px;
+    background-color: #f7e415;
+    display: flex;
+    flex-direction: column;
+    width: 35px;
+}
+
+.dgtCont div {
+    width: 25px;
+    height: 25px;
+    border: 4px solid red;
+}
+
+.number1 div{
+    border: 0px solid red;
+    border-right: 4px solid red;
+}
+.number2 div{
+    border: 0px solid red;
+    border-top: 4px solid red;
+    border-bottom: 4px solid red;
+}
+.number2 div:nth-child(1){
+    border: 0px solid red;
+    border-top: 4px solid red;
+    border-right: 4px solid red;
+}
+.number2 div:nth-child(2){
+    border: 0px solid red;
+    border-top: 4px solid red;
+    border-bottom: 4px solid red;
+    border-left: 4px solid red;
+}
+.number3 div{
+    border: 0px solid red;
+    border-top: 4px solid red;
+    border-bottom: 4px solid red;
+}
+.number3 div:nth-child(1){
+    border: 0px solid red;
+    border-top: 4px solid red;
+    border-right: 4px solid red;
+}
+.number3 div:nth-child(2){
+    border: 0px solid red;
+    border-top: 4px solid red;
+    border-bottom: 4px solid red;
+    border-right: 4px solid red;
+}
