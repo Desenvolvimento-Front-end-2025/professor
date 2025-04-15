@@ -9,6 +9,7 @@ import InputCount from "../../desafios/desafio06/InputCount"
 import MaiorMenor from "../../desafios/desafio06/MaiorMenor"
 import "./Portifolio.css"
 import Digital from "../../desafios/desafio07/Digital"
+import Login from "../../desafios/desafio08/Login"
 
 const Portifolio = ()=>{
 
@@ -73,6 +74,13 @@ const Portifolio = ()=>{
 
             <Card titulo="Desafio 07 - Relogio Digital" cor="#a7b" >
                 <Digital />
+
+            </Card>
+
+
+            <Card titulo="Desafio 08 - Tela de Login" 
+            cor="#bb5" >
+                <Login />
 
             </Card>
 

@@ -1,0 +1,26 @@
+.Login_container{
+    border: solid 2px #fff;
+    background-color: #968e8e;
+    box-shadow: 4px 4px 4px RGB(0,0,0,0.8);
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 5px;
+}
+
+.Login_container .row{
+    display: flex;
+    justify-content: space-around;
+    padding: 3px;
+    /* align-items: stretch; */
+}
+
+.Login_container .row label{
+    width: 50px;
+}
+
+.Login_container .row button{
+    padding: 8px;
+    letter-spacing: 3px;
+}
