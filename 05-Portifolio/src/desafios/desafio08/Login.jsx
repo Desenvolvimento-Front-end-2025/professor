@@ -26,6 +26,11 @@ const Login = ()=>{
             campo.current.focus()
         }
     } 
+    const desloga = ()=>{
+        setLogado(false)
+        setLogin("")
+        setSenha("")
+    }
     return(
         <>        
             {(!logado) &&(
@@ -50,7 +55,7 @@ const Login = ()=>{
             )}
 
             {(logado) &&(
-                <Home  />
+                <Home nome={login} logout={desloga}  />
             )}
         </>
     )
