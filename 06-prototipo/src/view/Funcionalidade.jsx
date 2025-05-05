@@ -1,16 +1,11 @@
-import { CardFooter } from "react-bootstrap"
-import PanelCards from "../components/Cards/PanelCards"
-import PanelCarrocel from "../components/Carrocel/PanelCarrocel"
 import Navigation from "../components/Navigation/Navigation"
 
-const Home = ( {menu} )=>{
+const Funcionalidade = ( {menu})=>{
     return(
         <>
         <Navigation menu={menu} />
 
-        <PanelCarrocel />
-
-        <PanelCards />
+        <h1 className="flex-grow-1">FUNCIONALIDADES</h1>
 
         <footer className="bg-black text-white text-center p-2">
             {new Date().getFullYear()} AVG System
@@ -20,4 +15,4 @@ const Home = ( {menu} )=>{
     )
 }
 
-export default Home
+export default Funcionalidade

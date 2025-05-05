@@ -1,8 +1,15 @@
+import { useEffect, useState } from "react"
 import { Container, Image, Nav, Navbar, NavDropdown } from "react-bootstrap"
 
 
-const Navigation = ()=>{
+const Navigation = ( {menu})=>{
 
+    const [select, setSelect] = useState(0)
+
+    const change = (pg)=>{
+        menu(pg)
+        setSelect(pg)
+    }
 
     return(
         <>
@@ -19,9 +26,18 @@ const Navigation = ()=>{
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav" >
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Início</Nav.Link>
-                        <Nav.Link href="#link">Funcionalidades</Nav.Link>
-                        <Nav.Link href="#link">Sobre</Nav.Link>                        
+                       
+                        <Nav.Link 
+                        className={select==0 ? 'active bg-primary':''}
+                        onClick={()=>change(0)} >Início</Nav.Link>
+
+                        <Nav.Link 
+                        className={select==1 ? 'active bg-primary':''}
+                        onClick={()=>change(1)}>Funcionalidades</Nav.Link>
+
+                        <Nav.Link
+                        className={select==2 ? 'active bg-primary':''}
+                        onClick={()=>change(2)}>Sobre</Nav.Link>                        
                     </Nav>
                     </Navbar.Collapse>
                 </Container>
