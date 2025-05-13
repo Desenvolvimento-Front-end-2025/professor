@@ -7,9 +7,30 @@ export const useAuth = () => useContext(AuthContext)
 export const AuthProvider = ( {children} )=>{
 
     const [logado, setLogado] = useState(false)
-    const [nome, setNome] = useState("Zezin da Silva")
+    const [user, setUser] = useState(null)
 
-    return <AuthContext.Provider value={{nome, logado}}>
+    const logout = ()=>{
+        setUser(null)
+    }
+
+    const login = (nome, senha)=>{
+
+        if (nome == "admin" && senha == "123"){
+            let u = {
+               nome: "Zezin da Silva", 
+               id: "15", 
+               perfil: "CLIENTE", 
+            }
+            setUser(u)
+            return true
+        }else{
+           setUser(null) 
+           return false
+        }
+    }
+
+
+    return <AuthContext.Provider value={{user, logado, login, logout}}>
         {children}
     </AuthContext.Provider>
 }

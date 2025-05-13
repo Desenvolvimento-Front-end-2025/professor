@@ -4,7 +4,8 @@ import { useAuth } from "../../context/AuthProvider"
 
 const Navigation = ()=>{
 
-    const {nome, logado} = useAuth()
+    const {user} = useAuth()
+    let nome = ""
     return(
         <>
             <Navbar expand="lg" className="bg-body-tertiary" 
@@ -22,7 +23,13 @@ const Navigation = ()=>{
                        
                         <Nav.Link as={Link} to="/" >Início</Nav.Link>
 
-                        <Nav.Link as={Link} to="/login">LAUgin</Nav.Link>
+                        { !user &&
+                            <Nav.Link as={Link} to="/login">LAUgin</Nav.Link>
+                        } 
+                        { user &&
+                            <Nav.Link as={Link} to="/logout">LAUGout</Nav.Link>
+                        } 
+
                         <Nav.Link as={Link} to="/cadastro">cAUdastro</Nav.Link>
 
                         <Nav.Link as={Link} to="/autencao">Autenção</Nav.Link>

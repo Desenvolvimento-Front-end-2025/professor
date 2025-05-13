@@ -4,6 +4,7 @@ import Navigation from "../components/nav/Navigation"
 import ViewCadastro from "../view/ViewCadastro"
 import ViewLogin from "../view/ViewLogin"
 import { AuthProvider } from "../context/AuthProvider"
+import ViewLogout from "../view/ViewLogout"
 
 
 const PetDog = ()=>{
@@ -19,6 +20,7 @@ const PetDog = ()=>{
 
                     <Route path="/cadastro" element={<ViewCadastro />} />
                     <Route path="/login" element={<ViewLogin />} />
+                    <Route path="/logout" element={<ViewLogout />} />
 
                     <Route path="/aujuda" element={<TextEmotion texto="Help-me" 
                     emotion="🦮" size={52} />} />
