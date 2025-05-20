@@ -22,7 +22,22 @@ const Navigation = ()=>{
                     <Nav className="me-auto">
                        
                         <Nav.Link as={Link} to="/" >Início</Nav.Link>
-
+                        <Nav.Link as={Link} to="/autencao">Autenção</Nav.Link>
+                        <Nav.Link as={Link} to="/aujuda">Aujuda</Nav.Link>  
+ 
+                        { (user && user.perfil == 'CLIENTE') &&
+                            <Nav.Link as={Link} to="/atendimentos">Meus Autendimentos</Nav.Link>
+                        } 
+                        { (user && user.perfil == 'FUNC') &&
+                            <Nav.Link as={Link} to="/agenda">Augenda</Nav.Link>
+                        } 
+                        { (user && user.perfil == 'ADMIN') &&
+                            <Nav.Link as={Link} to="/admin">Audmin</Nav.Link>
+                        } 
+                            
+                        { !user &&
+                            <Nav.Link as={Link} to="/cadastro">cAUdastro</Nav.Link>
+                        } 
                         { !user &&
                             <Nav.Link as={Link} to="/login">LAUgin</Nav.Link>
                         } 
@@ -30,11 +45,7 @@ const Navigation = ()=>{
                             <Nav.Link as={Link} to="/logout">LAUGout</Nav.Link>
                         } 
 
-                        <Nav.Link as={Link} to="/cadastro">cAUdastro</Nav.Link>
-
-                        <Nav.Link as={Link} to="/autencao">Autenção</Nav.Link>
-
-                        <Nav.Link as={Link} to="/aujuda">Aujuda</Nav.Link>                        
+                      
                     </Nav>
                     </Navbar.Collapse>
                 </Container>

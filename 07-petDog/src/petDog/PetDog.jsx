@@ -5,6 +5,8 @@ import ViewCadastro from "../view/ViewCadastro"
 import ViewLogin from "../view/ViewLogin"
 import { AuthProvider } from "../context/AuthProvider"
 import ViewLogout from "../view/ViewLogout"
+import ViewHome from "../view/ViewHome"
+import PrivateRoute from "../components/PrivateRoutes/PrivateRoute"
 
 
 const PetDog = ()=>{
@@ -15,8 +17,7 @@ const PetDog = ()=>{
             <BrowserRouter>
             <Navigation />
                 <Routes>
-                    <Route path="/" element={<TextEmotion texto="Au au...." 
-                    emotion="🐕" size={52} />} />
+                    <Route path="/" element={<ViewHome />} />
 
                     <Route path="/cadastro" element={<ViewCadastro />} />
                     <Route path="/login" element={<ViewLogin />} />
@@ -25,8 +26,21 @@ const PetDog = ()=>{
                     <Route path="/aujuda" element={<TextEmotion texto="Help-me" 
                     emotion="🦮" size={52} />} />
 
+                    <Route element={<PrivateRoute />}>
+                        <Route path="/admin" element={<TextEmotion texto="Administração" 
+                        emotion="🦮" size={52} />} />
+                        <Route path="/atendimentos" element={<TextEmotion texto="Meus atendimentos" 
+                        emotion="🦮" size={52} />} />
+                        <Route path="/agenda" element={<TextEmotion texto="Agenda" 
+                        emotion="🦮" size={52} />} />                    
+                    </Route>
+
                     <Route path="/autencao" element={<TextEmotion texto="Auautenção......" 
-                    emotion="🐾" size={52} />} />                
+                    emotion="🐾" size={52} />} />  
+                    
+                    <Route path="/notautorized" element={
+                        <TextEmotion texto="Sem permissão de acesso..." 
+                    emotion="🐾" size={52} />} />              
                     
                 </Routes>
             </BrowserRouter>
