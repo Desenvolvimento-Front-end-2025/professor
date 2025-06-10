@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "zezin",
+      "password": "ze@123"
+    },
+    {
+      "id": 2,
+      "username": "pedrin",
+      "password": "123"
+    }
+  ],
+  "produto": [
+    {
+      "id": 1,
+      "title": "Camisa do Tricolor",
+      "iduser": 1,
+      "idcategoria": 1
+    },
+    {
+      "id": 2,
+      "title": "Meião do Tricolor",
+      "iduser": 2,
+      "idcategoria": 2
+    }
+  ],
+  "categoria": [
+    {
+      "id": 1,
+      "categoria": "Roupa"
+    },
+    {
+      "id": 3,
+      "categoria": "Alimentação"
+    }
+  ]
+}
