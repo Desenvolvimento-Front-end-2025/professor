@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import { buscaUserAPI, loginAPI } from "../service/apiService";
 
 const AuthContext = createContext()
 
@@ -20,13 +21,22 @@ export const AuthProvider = ( {children} )=>{
         localStorage.removeItem('user')
     }
 
-    const login = (nome, senha)=>{
+    const login = async (nome, senha)=>{
 
-        if (nome == "admin" && senha == "123"){
+            console.log("login chamado context")   
+            
+            let resp = await loginAPI(nome, senha)
+            // console.log("TOKEN")
+            // console.log(resp.access_token)
+
+        if (resp != null){
+            let nsr = await buscaUserAPI(nome,resp.access_token )
+            console.log(nsr)
             let u = {
-               nome: "Zezin da Silva", 
-               id: "15", 
+               nome: nsr[0].nome, 
+               id: nsr[0].id, 
                perfil: "CLIENTE", 
+               token: resp.access_token
             }
             localStorage.setItem("user", JSON.stringify(u) )
             setUser(u)

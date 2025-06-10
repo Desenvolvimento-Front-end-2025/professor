@@ -39,7 +39,7 @@ server.post('/auth/login', (req, res) => {
   if (!isAuthenticated({ username, password })) {
     const status = 401
     const message =
-      'Ops! Parece que você digitou. Verifique o usuário e a senha!'
+      'Ops! Parece que você errou. Verifique o usuário e a senha!'
     res.status(status).json({ status, message })
     return
   }

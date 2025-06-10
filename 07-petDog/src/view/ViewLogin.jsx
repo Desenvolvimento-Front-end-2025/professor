@@ -19,9 +19,9 @@ const ViewLogin = (  )=>{
     const [senha, setSenha] = useState("")
     const [message, setMessage] = useState("")
 
-    const clickBtn = ()=>{
+    const clickBtn = async ()=>{
 
-        if (login( nome, senha )){
+        if ( await login( nome, senha )){
             setMessage("")
             setNome("")
             setSenha("")
