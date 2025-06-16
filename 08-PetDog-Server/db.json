@@ -4,21 +4,52 @@
       "id": 1,
       "username": "zezin",
       "nome": "Zezin da Silva",
-      "password": "ze@123"
+      "password": "ze@123",
+      "role": "CLIENTE"
     },
     {
       "id": 2,
       "username": "pedrin",
       "nome": "Pedrin da Gomes",
-      "password": "123"
+      "password": "123",
+      "role": "FUNC"
     },
     {
       "id": 3,
       "username": "gugu",
       "nome": "Gustin Vivi",
-      "password": "ze@123"
+      "password": "ze@123",
+      "role": "ADMIN"
     }
   ],
-  "animal":[]
-
+  "animal": [
+    {
+      "nome": "Duck",
+      "tipo": "2",
+      "dono": 1,
+      "raca": "vira lata",
+      "id": 1
+    },
+    {
+      "nome": "Nick",
+      "tipo": "1",
+      "dono": 2,
+      "raca": "vira lata",
+      "id": 2
+    },
+    {
+      "nome": "xpto",
+      "tipo": "2",
+      "dono": 1,
+      "raca": "persa",
+      "id": 3
+    },
+    {
+      "nome": "outro",
+      "tipo": 1,
+      "dono": 1,
+      "raca": "pinscher",
+      "id": 4
+    }
+  ]
 }

@@ -7,6 +7,7 @@ import { AuthProvider } from "../context/AuthProvider"
 import ViewLogout from "../view/ViewLogout"
 import ViewHome from "../view/ViewHome"
 import PrivateRoute from "../components/PrivateRoutes/PrivateRoute"
+import ViewAnimais from "../view/ViewAnimais"
 
 
 const PetDog = ()=>{
@@ -19,7 +20,7 @@ const PetDog = ()=>{
                 <Routes>
                     <Route path="/" element={<ViewHome />} />
 
-                    <Route path="/cadastro" element={<ViewCadastro />} />
+                    
                     <Route path="/login" element={<ViewLogin />} />
                     <Route path="/logout" element={<ViewLogout />} />
 
@@ -27,10 +28,12 @@ const PetDog = ()=>{
                     emotion="🦮" size={52} />} />
 
                     <Route element={<PrivateRoute />}>
+                    
+                        <Route path="/cadastro" element={<ViewCadastro />} />
+
                         <Route path="/admin" element={<TextEmotion texto="Administração" 
                         emotion="🦮" size={52} />} />
-                        <Route path="/atendimentos" element={<TextEmotion texto="Meus atendimentos" 
-                        emotion="🦮" size={52} />} />
+                        <Route path="/aninais" element={<ViewAnimais />} />
                         <Route path="/agenda" element={<TextEmotion texto="Agenda" 
                         emotion="🦮" size={52} />} />                    
                     </Route>

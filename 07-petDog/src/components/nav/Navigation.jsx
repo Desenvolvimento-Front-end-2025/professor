@@ -26,7 +26,7 @@ const Navigation = ()=>{
                         <Nav.Link as={Link} to="/aujuda">Aujuda</Nav.Link>  
  
                         { (user && user.perfil == 'CLIENTE') &&
-                            <Nav.Link as={Link} to="/atendimentos">Meus Autendimentos</Nav.Link>
+                            <Nav.Link as={Link} to="/aninais">Meus Autendimentos</Nav.Link>
                         } 
                         { (user && user.perfil == 'FUNC') &&
                             <Nav.Link as={Link} to="/agenda">Augenda</Nav.Link>
@@ -35,7 +35,7 @@ const Navigation = ()=>{
                             <Nav.Link as={Link} to="/admin">Audmin</Nav.Link>
                         } 
                             
-                        { !user &&
+                        { user &&
                             <Nav.Link as={Link} to="/cadastro">cAUdastro</Nav.Link>
                         } 
                         { !user &&

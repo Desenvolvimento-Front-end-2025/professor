@@ -35,7 +35,7 @@ export const AuthProvider = ( {children} )=>{
             let u = {
                nome: nsr[0].nome, 
                id: nsr[0].id, 
-               perfil: "CLIENTE", 
+               perfil: nsr[0].role, 
                token: resp.access_token
             }
             localStorage.setItem("user", JSON.stringify(u) )
